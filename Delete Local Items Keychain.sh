@@ -10,7 +10,9 @@ if test -e /Users/$loggedInUser/Library/Keychains/????????-????-????-????-??????
         echo "Local Items Keychain was successfully removed."
     else
         echo "Local Items keychain was not removed."
+        echo "Exiting..."
         exit 1
+    fi
 else
     echo "Local Items Keychain was not found."
     echo "Exiting..."
