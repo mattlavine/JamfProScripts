@@ -1,6 +1,6 @@
 #!/bin/bash
 #------------------------------------------------------------------------------
-fileToDelete="/var/db/MDM_CKSupportRequestsFromDaemon"
+fileToDelete="$4"
 #------------------------------------------------------------------------------
 
 echo "Attempting to delete the following file: $fileToDelete"
