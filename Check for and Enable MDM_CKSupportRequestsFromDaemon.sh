@@ -3,23 +3,23 @@
 fileToCreate="/var/db/MDM_CKSupportRequestsFromDaemon"
 #------------------------------------------------------------------------------
 
-echo "Attempting to create the following file: $fileToCreate"
+echo "Attempting to create the following file: /var/db/MDM_CKSupportRequestsFromDaemon"
 
-if [ ! -f $fileToCreate ]; then
+if [ ! -f /var/db/MDM_CKSupportRequestsFromDaemon ]; then
 
-	echo "$fileToCreate does not exist."
+	echo "/var/db/MDM_CKSupportRequestsFromDaemon does not exist."
 	echo "Attempting to create..."
 
 	#If file doesn't exist then create it
-	touch $fileToCreate
+	touch /var/db/MDM_CKSupportRequestsFromDaemon
 
 	#Verify that file was created
-	if [ ! -f $fileToCreate ]; then
-		echo "File was not created."
+	if [ ! -f /var/db/MDM_CKSupportRequestsFromDaemon ]; then
+		echo "/var/db/MDM_CKSupportRequestsFromDaemon was not created."
 		echo "Quitting with Error 1"
 		exit 1
 	else
-		echo "File was created successfully."
+		echo "/var/db/MDM_CKSupportRequestsFromDaemon was created successfully."
 		echo "Quitting."
 		exit 0
 	fi
@@ -27,7 +27,7 @@ if [ ! -f $fileToCreate ]; then
 else
 
 	#If file exists then do nothing
-	echo "File already exists."
+	echo "/var/db/MDM_CKSupportRequestsFromDaemon already exists."
 	exit 0
 
 fi

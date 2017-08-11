@@ -15,11 +15,11 @@ if [ ! -f $fileToCreate ]; then
 
 	#Verify that file was created
 	if [ ! -f $fileToCreate ]; then
-		echo "File was not created."
+		echo "$fileToCreate was not created."
 		echo "Quitting with Error 1"
 		exit 1
 	else
-		echo "File was created successfully."
+		echo "$fileToCreate was created successfully."
 		echo "Quitting."
 		exit 0
 	fi
@@ -27,7 +27,7 @@ if [ ! -f $fileToCreate ]; then
 else
 
 	#If file exists then do nothing
-	echo "File already exists."
+	echo "$fileToCreate already exists."
 	exit 0
 
 fi

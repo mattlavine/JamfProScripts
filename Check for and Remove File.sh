@@ -15,11 +15,11 @@ if [ -f $fileToDelete ]; then
 
 	#Verify that file was deleted
 	if [ -f $fileToDelete ]; then
-		echo "File was not deleted."
+		echo "$fileToDelete was not deleted."
 		echo "Quitting with Error 1"
 		exit 1
 	else
-		echo "File was deleted successfully."
+		echo "$fileToDelete was deleted successfully."
 		echo "Quitting."
 		exit 0
 	fi
@@ -27,7 +27,7 @@ if [ -f $fileToDelete ]; then
 else
 
 	#If file doesn't exist then do nothing
-	echo "File doesn't exists."
+	echo "$fileToDelete doesn't exists."
 	exit 0
 
 fi

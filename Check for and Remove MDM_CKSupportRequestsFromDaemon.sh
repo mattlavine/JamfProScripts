@@ -3,23 +3,23 @@
 fileToDelete="/var/db/MDM_CKSupportRequestsFromDaemon"
 #------------------------------------------------------------------------------
 
-echo "Attempting to delete the following file: $fileToDelete"
+echo "Attempting to delete the following file: /var/db/MDM_CKSupportRequestsFromDaemon"
 
-if [ -f $fileToDelete ]; then
+if [ -f /var/db/MDM_CKSupportRequestsFromDaemon ]; then
 
-	echo "$fileToDelete exists."
+	echo "/var/db/MDM_CKSupportRequestsFromDaemon exists."
 	echo "Attempting to delete..."
 
 	#If file exists then delete it
-	rm -f $fileToDelete
+	rm -f /var/db/MDM_CKSupportRequestsFromDaemon
 
 	#Verify that file was deleted
-	if [ -f $fileToDelete ]; then
-		echo "File was not deleted."
+	if [ -f /var/db/MDM_CKSupportRequestsFromDaemon ]; then
+		echo "/var/db/MDM_CKSupportRequestsFromDaemon was not deleted."
 		echo "Quitting with Error 1"
 		exit 1
 	else
-		echo "File was deleted successfully."
+		echo "/var/db/MDM_CKSupportRequestsFromDaemon was deleted successfully."
 		echo "Quitting."
 		exit 0
 	fi
@@ -27,7 +27,7 @@ if [ -f $fileToDelete ]; then
 else
 
 	#If file doesn't exist then do nothing
-	echo "File doesn't exists."
+	echo "/var/db/MDM_CKSupportRequestsFromDaemon doesn't exists."
 	exit 0
 
 fi
