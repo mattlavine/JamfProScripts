@@ -7,7 +7,6 @@
 #    /Library/Preferences/com.apple.MCXDebug.plist
 #    /var/db/MDM_EnableDebug
 #    /var/db/MDM_CKSupportRequestsFromDaemon
-#
 #------------------------------------------------------------------------------
 
 filesToDelete=(/Library/Preferences/com.apple.MCXDebug.plist /var/db/MDM_EnableDebug /var/db/MDM_CKSupportRequestsFromDaemon)
@@ -24,15 +23,15 @@ for file in ${filesToDelete[@]}; do
 
   	#Verify that file was deleted
   	if [ -f $file ]; then
-  		echo "$file was not deleted."
-  		echo ""
+      echo "$file was not deleted."
+      echo ""
   	else
-  		echo "$file was deleted successfully."
-  		echo ""
+      echo "$file was deleted successfully."
+      echo ""
   	fi
   else
-  	#If file doesn't exist then do nothing
-  	echo "$file doesn't exist."
+    #If file doesn't exist then do nothing
+    echo "$file doesn't exist."
     echo ""
   fi
 done
