@@ -4,12 +4,13 @@
 #
 # The following files are to be deleted:
 #
-#    /Library/Preferences/com.apple.MCXDebug
+#    /Library/Preferences/com.apple.MCXDebug.plist
 #    /var/db/MDM_EnableDebug
 #    /var/db/MDM_CKSupportRequestsFromDaemon
+#
 #------------------------------------------------------------------------------
 
-filesToDelete=(/Library/Preferences/com.apple.MCXDebug /var/db/MDM_EnableDebug /var/db/MDM_CKSupportRequestsFromDaemon)
+filesToDelete=(/Library/Preferences/com.apple.MCXDebug.plist /var/db/MDM_EnableDebug /var/db/MDM_CKSupportRequestsFromDaemon)
 
 for file in ${filesToDelete[@]}; do
   echo "Attempting to delete the following file: $file"
