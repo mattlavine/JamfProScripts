@@ -15,7 +15,6 @@ for file in ${filesToDelete[@]}; do
   echo "Attempting to delete the following file: $file"
 
   if [ -f $file ]; then
-
   	echo "$file exists."
   	echo "Attempting to delete..."
 
@@ -25,19 +24,14 @@ for file in ${filesToDelete[@]}; do
   	#Verify that file was deleted
   	if [ -f $file ]; then
   		echo "$file was not deleted."
-  		echo "Quitting with Error 1"
-  		exit 1
+  		echo ""
   	else
   		echo "$file was deleted successfully."
-  		echo "Quitting."
-  		exit 0
+  		echo ""
   	fi
-
   else
-
   	#If file doesn't exist then do nothing
   	echo "$file doesn't exist."
-  	exit 0
-
+    echo ""
   fi
 done
