@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # STEPS FOR SCRIPT
-# 1) 
+# 1)
 # 2)
 # 3)
 # 4)
@@ -23,9 +23,13 @@ echo "Home Path of '$user' is '$homePath'"
 
 
 #Check if user is in /Users/ folder
+if [ -d "$homePath" ]; then
+  echo "Home folder for $user currently exists, located at $homePath."
+else
+  echo "Home folder for $user does NOT currently exist, should be located at $homePath"
+fi
 
-
-#Check if IsHidden has already been set
+#Check if IsHidden user attribute has already been set
 dscl . -read `eval echo "~$user"` IsHidden
 
 # Set specified User account to be Hidden
@@ -46,7 +50,6 @@ echo "Attempting to move home folder of '$user' from '$homePath' to '$newHomePat
 echo "Attempting to update the user record of '$user' with the new home directory path in '$newHomePath'"
 #dscl . -create $homePath NFSHomeDirectory $newHomePath
 
-# 
+#
 echo "Attempting to remove the Public Folder share point for the user with the long name '$userRealName'"
 #dscl . -delete $userSharePoint
-
