@@ -18,11 +18,11 @@ username="";
 # setIsHidden = 0; Don't hide the user account
 # setIsHidden = Anything Else; Invalid
 # Must be in Quotes
-setIsHidden="";
+setIsHidden="1";
 
 # 0 = Do Not Move User's Home Folder; 1 = Move User's Home Folder
 # Must be in Quotes
-moveUserFolder="";
+moveUserFolder="1";
 
 #--------------------
 # OPTIONAL VARIABLES
@@ -30,7 +30,7 @@ moveUserFolder="";
 # MUST BE SET IF 'moveUserFolder' = '1'.
 # Folder to move the user's home folder to
 # Must be in Quotes
-newUserHomePathFolder="";
+newUserHomePathFolder="/private/var";
 #---------------------------------------------------
 
 #------------------------------------------------------------------------------------------------------
