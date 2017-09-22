@@ -57,7 +57,7 @@ mkdir "$mdmLogFolderDate"
 cp -R $managedClientLogs $mdmLogFolderDate
 
 # Collect System Logs and Copy them
-log collect --output $mdmLogFolderDate --last 7d --size 10000m
+log collect --output $mdmLogFolderDate --last 1d --size 10000m
 
 #sysdiagnose -b -d -q -f $mdmLogFolderDate
 

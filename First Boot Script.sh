@@ -8,7 +8,7 @@
 /usr/bin/defaults write /Library/Preferences/com.apple.timezone.auto Active -bool TRUE
 
 # Hide /opt folder created by Cisco AnyConnect
-if [ -d "/opt" ]; then
-	chflags hidden /opt
-fi
+#if [ -d "/opt" ]; then
+#	chflags hidden /opt
+#fi
 	
